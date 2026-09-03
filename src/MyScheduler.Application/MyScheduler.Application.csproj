@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MyScheduler.Domain\MyScheduler.Domain.csproj" />
-    <ProjectReference Include="..\MyScheduler.Persistence\MyScheduler.Persistence.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

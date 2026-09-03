@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\MyScheduler.Application\MyScheduler.Application.csproj" />
     <ProjectReference Include="..\MyScheduler.Infrastructure\MyScheduler.Infrastructure.csproj" />
+    <ProjectReference Include="..\MyScheduler.Persistence\MyScheduler.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>
