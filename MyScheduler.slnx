@@ -9,6 +9,8 @@
   <Folder Name="/tests/">
     <Project Path="tests/MyScheduler.Api.IntegrationTests/MyScheduler.Api.IntegrationTests.csproj" />
     <Project Path="tests/MyScheduler.Api.UnitTests/MyScheduler.Api.UnitTests.csproj" />
+    <Project Path="tests/MyScheduler.Application.UnitTests/MyScheduler.Application.UnitTests.csproj" />
     <Project Path="tests/MyScheduler.Domain.UnitTests/MyScheduler.Domain.UnitTests.csproj" />
+    <Project Path="tests/MyScheduler.Persistence.IntegrationTests/MyScheduler.Persistence.IntegrationTests.csproj" />
   </Folder>
 </Solution>
