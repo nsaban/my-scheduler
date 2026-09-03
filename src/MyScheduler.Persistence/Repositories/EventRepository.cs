@@ -6,10 +6,18 @@ namespace MyScheduler.Persistence.Repositories;
 
 public sealed class EventRepository(AppDbContext dbContext) : IEventRepository
 {
-    public Task<Event?> GetByIdAsync(Guid id, CancellationToken cancellationToken) =>
-        dbContext.Events
+    public Task<Event?> GetByIdAsync(Guid id, CancellationToken cancellationToken)
+    {
+        var tracked = dbContext.Events.Local.SingleOrDefault(e => e.Id == id);
+        if (tracked is not null)
+        {
+            return Task.FromResult<Event?>(tracked);
+        }
+
+        return dbContext.Events
             .Include(e => e.EventAttendees)
             .SingleOrDefaultAsync(e => e.Id == id, cancellationToken);
+    }
 
     public async Task<Event?> GetForUpdateAsync(Guid id, byte[] expectedVersion, CancellationToken cancellationToken)
     {
