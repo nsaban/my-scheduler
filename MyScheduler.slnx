@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/clients/">
+    <Project Path="clients/MyScheduler.Client/MyScheduler.Client.csproj" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/MyScheduler.Api/MyScheduler.Api.csproj" />
     <Project Path="src/MyScheduler.Application/MyScheduler.Application.csproj" />
